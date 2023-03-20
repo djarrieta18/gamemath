@@ -21,6 +21,7 @@ public class Puzzle : MonoBehaviour
     [SerializeField] GameObject manzParent;
     [SerializeField] Vector2 initpos;
     [SerializeField] float spacemanz = 1;
+    [SerializeField] Drag[] dragAnsw;
 
     [SerializeField] Sprite[] numberSprites;
     float ypos = -0.3f;
@@ -48,7 +49,7 @@ public class Puzzle : MonoBehaviour
     void Start()
     {
 
-        int currenManzaNum = GetRanManza();
+        currenManzaNum = GetRanManza();
 
         for (int i = 0; i < currenManzaNum; i++)
         {
@@ -58,11 +59,16 @@ public class Puzzle : MonoBehaviour
             }
             GameObject currManza = Instantiate(fruitPref[fruitsSelected.GetHashCode()]);
             currManza.transform.parent = manzParent.transform;
-            currManza.transform.localPosition = new Vector2(initpos.x + i%6 * spacemanz, initpos.y - (ypos));
+            currManza.transform.localPosition = new Vector2(initpos.x + i%6 * spacemanz, initpos.y - (ypos)); 
             
             
         }
         SetAnswers();
+        for (int i = 0; i < dragAnsw.Length; i++)
+        {
+           
+            dragAnsw[i].SetValue(answers[i] == currenManzaNum);
+        }
 
         for (int i = 0; i < options.Length; i++)
         {
