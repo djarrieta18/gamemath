@@ -40,6 +40,7 @@ public class Drag  : MonoBehaviour
             return;
 
         _dragging = true;
+        AudioManager.instance.Play("Drag");
         _offset = GetMousePos() - (Vector2)transform.position;
     }
      void OnMouseUp()
@@ -50,13 +51,19 @@ public class Drag  : MonoBehaviour
         {
             transform.position = container.position;
             isPlaced = true;
+            
         }
         else
         {
             transform.position = _originalPosition;
+            _dragging = false;
+            AudioManager.instance.Play("Back");
+
 
         }
         _dragging = false;
+        //AudioManager.instance.Play("Back");
+
     }
 
     Vector2 GetMousePos()
