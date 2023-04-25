@@ -28,6 +28,9 @@ public class Puzzle : MonoBehaviour
     int currenManzaNum;
     [SerializeField] Options[] options;
 
+    //[SerializeField] GameObject popUp;
+
+
     int[] answers =new int []{
 
         0,
@@ -133,7 +136,7 @@ public class Puzzle : MonoBehaviour
     {
         System.Random rd = new System.Random();
 
-      int rand_num = rd.Next(1,18);
+      int rand_num = rd.Next(1,10);
         Debug.Log(rand_num);
         return rand_num;
     }
@@ -143,4 +146,9 @@ public class Puzzle : MonoBehaviour
     {
         
     }
+
+    //public void ShowPopUp()
+    //{
+    //    popUp.SetActive(true);
+    //}
 }

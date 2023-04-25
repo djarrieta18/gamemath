@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Drag  : MonoBehaviour
 {
@@ -10,14 +11,17 @@ public class Drag  : MonoBehaviour
     private Vector2 _offset,_originalPosition;
     [SerializeField]private bool value;
     [SerializeField] Transform container;
-    bool isPlaced;
+    bool isPlaced; 
+    
 
     public bool Value { get => value; }
+    
 
     void Awake()
     {
         _originalPosition = transform.position;
         isPlaced = false;
+        //isGameWin = false;
     }
 
     public void SetValue(bool val)
@@ -51,8 +55,15 @@ public class Drag  : MonoBehaviour
         {
             transform.position = container.position;
             isPlaced = true;
-            
-        }
+            if (Collision.tag == "Win")
+            {
+                Debug.Log("Game Win");
+                PlayerManager.isGameWin = true;
+                AudioManager.instance.Play("GameOver");
+                gameObject.SetActive(false);
+                }
+
+            }
         else
         {
             transform.position = _originalPosition;
