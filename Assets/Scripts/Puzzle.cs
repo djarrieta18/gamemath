@@ -19,6 +19,7 @@ public class Puzzle : MonoBehaviour
     [SerializeField] fruits fruitsSelected;
     [SerializeField] GameObject[] fruitPref;
     [SerializeField] GameObject manzParent;
+    [SerializeField] GameObject winpopUp; //referencia al object
     [SerializeField] Vector2 initpos;
     [SerializeField] float spacemanz = 1;
     [SerializeField] Drag[] dragAnsw;
@@ -46,12 +47,31 @@ public class Puzzle : MonoBehaviour
         //public SpriteRenderer digitB;
     }
 
+    private void OnEnable()
+    {
+        Drag.winPopUp += ShowWinpopUp;
+    }
+
+    private void OnDisable()
+    {
+
+        Drag.winPopUp -= ShowWinpopUp;
+
+    }
+
+
+    void ShowWinpopUp()
+    {
+        winpopUp.SetActive(true); //activamos el popup
+    }
+
 
 
 
     void Start()
     {
 
+        winpopUp.SetActive(false);
         currenManzaNum = GetRanManza();
 
         for (int i = 0; i < currenManzaNum; i++)

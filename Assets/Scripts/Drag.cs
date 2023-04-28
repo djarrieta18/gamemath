@@ -11,8 +11,11 @@ public class Drag  : MonoBehaviour
     private Vector2 _offset,_originalPosition;
     [SerializeField]private bool value;
     [SerializeField] Transform container;
-    bool isPlaced; 
-    
+    bool isPlaced;
+
+    public delegate void MyDelegate();
+    public static MyDelegate winPopUp;
+
 
     public bool Value { get => value; }
     
@@ -55,13 +58,14 @@ public class Drag  : MonoBehaviour
         {
             transform.position = container.position;
             isPlaced = true;
-            if (Collision.tag == "Win")
-            {
-                Debug.Log("Game Win");
-                PlayerManager.isGameWin = true;
-                AudioManager.instance.Play("GameOver");
-                gameObject.SetActive(false);
-                }
+            winPopUp?.Invoke();
+            //if (Collision.tag == "Win")
+            //{
+            //    Debug.Log("Game Win");
+            //    PlayerManager.isGameWin = true;
+            //    AudioManager.instance.Play("GameOver");
+            //    gameObject.SetActive(false);
+            //    }
 
             }
         else
