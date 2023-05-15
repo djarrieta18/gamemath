@@ -13,7 +13,7 @@ public class Drag  : MonoBehaviour
     [SerializeField] Transform container;
     bool isPlaced;
 
-    public delegate void MyDelegate();
+    public delegate void MyDelegate(); 
     public static MyDelegate winPopUp;
 
 

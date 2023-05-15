@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{E3D1E6A0-CDB6-F3C1-D77D-0827B79432F8}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/Mace.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Drag.cs" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/Puzzle.cs" />
+      <File FileName="Assets/Scripts/Puzzle2.cs" />
+      <File FileName="Assets/Scripts/Player/PlayerManager.cs" />
+      <File FileName="Assets/Scripts/MenuEvents.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy/Mace.cs" Line="10" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameMath" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Enemy" expanded="True">
+                  <Node name="Mace.cs" selected="True" />
+                </Node>
+                <Node name="Player" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c435263c-5cb2-4671-b662-d40f3b151395" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
