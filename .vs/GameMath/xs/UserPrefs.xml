@@ -5,8 +5,9 @@
       <File FileName="Assets/Scripts/Puzzle.cs" />
       <File FileName="Assets/Scripts/Puzzle2.cs" />
       <File FileName="Assets/Scripts/Player/PlayerManager.cs" />
-      <File FileName="Assets/Scripts/MenuEvents.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MenuEvents.cs" />
       <File FileName="Assets/Scripts/Enemy/Mace.cs" Line="10" Column="21" />
+      <File FileName="Assets/Scripts/Saw.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,6 +20,9 @@
                 </Node>
                 <Node name="Player" expanded="True" />
               </Node>
+              <Node name="TextMesh Pro" expanded="True">
+                <Node name="Shaders" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -27,7 +31,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c435263c-5cb2-4671-b662-d40f3b151395" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2cb76bbe-a69b-47cf-a6d6-b046de5ebcd1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

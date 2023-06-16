@@ -11,7 +11,8 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
-             Debug.Log("Game over");
+            Debug.Log(collision.transform.name);
+            Debug.Log("Game over");
             PlayerManager.isGameOver = true;
             AudioManager.instance.Play("GameOver");
             gameObject.SetActive(false);

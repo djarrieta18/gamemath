@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum fruit
+public enum frui
 {
     apple = 0,
     banana = 1,
@@ -20,6 +20,7 @@ public class Puzzle2 : MonoBehaviour
     [SerializeField] fruit fruitsSelected;
     [SerializeField] GameObject[] fruitPref;
     [SerializeField] GameObject manzParent;
+    // [SerializeField] GameObject manzParent2;
     [SerializeField] GameObject winpopUp; //referencia al object
     [SerializeField] Vector2 initpos;
     [SerializeField] float spacemanz = 1;
@@ -28,6 +29,7 @@ public class Puzzle2 : MonoBehaviour
     [SerializeField] Sprite[] numberSprites;
     float ypos = -0.3f;
     int currenManzaNum;
+    // int currenManzaTot;
     [SerializeField] Options[] options;
 
     //[SerializeField] GameObject popUp;
@@ -74,6 +76,7 @@ public class Puzzle2 : MonoBehaviour
 
         winpopUp.SetActive(false);
         currenManzaNum = GetRanManza();
+        // currenManzaTot = currenManzaNum + currenManzaNum;
 
         for (int i = 0; i < currenManzaNum; i++)
         {
@@ -84,6 +87,11 @@ public class Puzzle2 : MonoBehaviour
             GameObject currManza = Instantiate(fruitPref[fruitsSelected.GetHashCode()]);
             currManza.transform.parent = manzParent.transform;
             currManza.transform.localPosition = new Vector2(initpos.x + i % 6 * spacemanz, initpos.y - (ypos));
+
+
+            // GameObject currManz = Instantiate(fruitPref[fruitsSelected.GetHashCode()]);
+            // currManz.transform.parent = manzParent2.transform;
+            // currManz.transform.localPosition = new Vector2(initpos.x + i % 6 * spacemanz, initpos.y - (ypos));
 
 
         }
